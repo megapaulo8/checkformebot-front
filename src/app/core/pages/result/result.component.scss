@@ -1,0 +1,128 @@
+.container {
+  background: #16202A;
+  width: 100vw;
+  height: auto;
+
+  .header--wrapper {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    margin: 0 28px 0 0;
+    padding: 20px 30px;
+
+    .avatar {
+      height: 38px;
+      width: 38px;
+    }
+
+    .title--checkbot {
+      color: white;
+      font-weight: bold;
+      font-size: 24px;
+      margin: 0;
+    }
+  }
+
+  ::ng-deep .mat-divider {
+    background: #727D88;
+  }
+
+  ::ng-deep .mat-spinner {
+    position: absolute;
+    margin: 100px auto 0 auto;
+    left: 0;
+    z-index: 9999;
+    right: 0;
+    text-align: center;
+  }
+
+  .container--loading {
+    z-index: 1;
+    background: #16202A;
+    height: 100vh;
+    position: absolute;
+    width: 100vw;
+    opacity: 0.8;
+    top: 0;
+  }
+
+  ::ng-deep .mat-progress-spinner circle, .mat-spinner circle {
+    stroke: #228AD4;
+  }
+
+  .content--wrapper {
+    padding: 16px 20px 80px 30px;
+
+    .news--title {
+      color: #727D88;
+      font-size: 20px;
+    }
+
+    .news--description {
+      color: white;
+      font-size: 18px;
+      margin: 0;
+    }
+
+    .news--status {
+      color: #727D88;
+      font-size: 20px;
+      line-height: 24px;
+      margin: 20px 0 0 0;
+    }
+
+    .link--related-wrapper {
+      margin-top: 20px;
+
+      .title {
+        color: white;
+        font-size: 20px;
+        margin: 0 0 10px 0;
+      }
+
+      .link {
+        color: #228AD4;
+        font-size: 14px;
+        text-decoration: underline;
+        margin: 0;
+      }
+    }
+
+    .share--result {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      margin-top: 22px;
+
+      ::ng-deep .mat-icon {
+        color: #228AD4;
+        width: 24px;
+        height: 24px;
+        font-size: 24px;
+      }
+
+      .share--result-title {
+        color: #228AD4;
+        font-size: 12px;
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .footer--wrapper {
+    bottom: 0;
+    background: #16202A;
+    border-top: 0.5px solid #727D88;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    padding: 20px 66px;
+
+    p {
+      color: #727D88;
+      font-size: 12px;
+      margin: 0;
+    }
+  }
+}

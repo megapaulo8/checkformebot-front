@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="header--wrapper">
+    <img src="assets/images/checkformebot-avatar.svg" alt="Avatar CheckForMeBot" class="avatar">
+    <p class="title--checkbot">CheckForMe</p>
+    <div></div>
+  </div>
+  <mat-divider></mat-divider>
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+  <div class="container--loading" *ngIf="isLoading"></div>
+  <div class="content--wrapper">
+    <p class="news--title">News:</p>
+    <p class="news--description">{{ result?.newsTitle }}</p>
+    <google-chart [options]="options" [type]="'PieChart'" [data]="result?.resultChart"></google-chart>
+    <p class="news--status">{{ result?.resultText }}</p>
+    <div class="link--related-wrapper">
+      <p class="title">Check these reliable sources related to this topic:</p>
+      <p class="link" (click)="redirectToReliableSource(link)" *ngFor="let link of result?.reliableSources">{{ link }}</p>
+    </div>
+    <div class="share--result">
+      <mat-icon>share</mat-icon>
+      <div class="share--result-title">Share this result with other people to their known about the veracity about this news</div>
+    </div>
+  </div>
+  <div class="footer--wrapper"><p>Designed and Developed by WinDevs© - 2020</p></div>
+</div>
