@@ -14,6 +14,6 @@ export class ResultService {
   ) { }
 
   getResultById(id: string): Observable<Result> {
-    return this.http.get(`/check/dashboard/${id}`);
+    return this.http.get(`/dashboard/result/${id}`);
   }
 }
